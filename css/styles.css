@@ -46,7 +46,7 @@ header a:hover{
   font-weight: bold;
 }
 
-.logo{
+.logo {
   float: left;
   display: inline;
   width: 200px;
@@ -56,80 +56,76 @@ header a:hover{
   bottom: -50px;
 }
 
-
-.search {
-  font-family: "Helvetica" ;
-  width: 100%;
+form {
   position: relative;
-  display: flex;
-  left:290px;
-}
-
-.searchTerm {
-  width: 100%;
-  
-  border-right: none;
+  top: 0%;
+  left: 0%;
+  transform: translate(50%, 0%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid black;
   padding: 5px;
-  height: 12px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #000000;
 }
 
-.searchTerm:focus{
-  color: #000000;
-}
-
-.searchButton {
-  width: 90px;
-  height: 26px;
-  border: 1px solid #000000;
-  background: #000000;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 30%;
+input {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-.dropdown_content {
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
   display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
 }
 
-.dropdown_content a {
-  float: none;
+form:hover {
+  width: 250px;
+  cursor: pointer;
+}
+
+form:hover input{
+  display: block;
+}
+
+form:hover .fa {
+  background: #07051a;
+  color: white;
+}
+
+.shopping-bag {
+  border-radius: 25px;
+  padding: 13px;
+  border: 4px solid black;
+}
+
+i {
   color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.dropdown_content a:hover {
-  background-color: #ddd;
 }
 
-.dropdown:hover .dropdown_content {
-  display: block;
+a:hover .fas {
+  background: #07051a;
+  color: white;
 }
-
-
-
-
-
-
-
