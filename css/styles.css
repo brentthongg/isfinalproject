@@ -1,4 +1,13 @@
-header{
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+/* WHAT WAS THERE BEFORE 
+ header {
   font-family: "Helvetica";
   position: relative;
   background: #E4E1E1;
@@ -8,14 +17,14 @@ header{
  
 }
 
-header a{
+header a {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
 }
 
-header li{
+header li {
   position: relative;
   right: 600px;
   bottom: 25px;
@@ -27,11 +36,11 @@ header #branding {
   float: left;
 }
 
-header #branding h1{
+header #branding h1 {
   margin: 0;
 }
 
-header nav{
+header nav {
   float: right;
   margin-top: 10px;
 }
@@ -41,7 +50,7 @@ header .highlight, header .current a {
   font-weight: bold;
 }
 
-header a:hover{
+header a:hover {
   color: #cccccc;
   font-weight: bold;
 }
@@ -110,10 +119,6 @@ form:hover input{
   display: block;
 }
 
-form:hover .fa {
-  background: #07051a;
-  color: white;
-}
 
 .shopping-bag {
   border-radius: 25px;
@@ -128,4 +133,35 @@ i {
 a:hover .fas {
   background: #07051a;
   color: white;
+}
+*/
+
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.input-field label {
+ color: #000;
+}
+/* label underline focus color */
+.input-field input[type=search]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
 }
