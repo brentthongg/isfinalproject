@@ -308,21 +308,19 @@ input::placeholder {
 .header-3, .header-4{
   text-align: center;
 }
-
+/*
 .giveaway{
   position:absolute;
   width:100%;
   height:100%;
-  right:25px;
 }
 
 .giveaway .selfie{
   display:block;
   margin-left: auto;
   margin-right: auto;
-
 }
-
+*/
 
 
 #myFooter {
