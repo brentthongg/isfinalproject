@@ -1,5 +1,5 @@
-.container .bios h3 {
-	font-style: bold;
+.container h3 {
+	font-weight: bold;
 }
 
 .bios .bio-row .column {
@@ -15,7 +15,7 @@
 	position: relative;
 	text-align: center;
 	padding: 1em;
-	border: 1px solid black;
+	border-style: outset;
 }
 
 .bios .bio-row .column .bio img {
@@ -28,4 +28,33 @@
  	display: table;
 	clear: both;
 	height: auto;
+}
+
+.location .column {
+	float: left;
+	height: auto;
+	position: relative;
+	padding: 1em;
+}
+
+.location .column .left {
+	width: 75%;
+}
+
+.location iframe {
+	margin: auto;
+}
+
+.location .column .right {
+	width: 25%;
+}
+
+.location .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#spots {
+	display: none;
 }

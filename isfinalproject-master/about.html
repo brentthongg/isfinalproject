@@ -24,7 +24,6 @@
       <li><a href="mens.html" class="black-text">For Men</a></li>
       <li><a href="womens.html" class="black-text">For Women</a></li>
       <li class="divider"></li>
-      <li><a href="#" class="black-text">Travel</a></li>
     </ul>
 
     <div class="navbar-fixed">
@@ -34,7 +33,7 @@
         <ul class="right hide-on-med-and-down">
           <li><a class="dropdown-trigger black-text" href="#!" data-target="dropdown1">Catalog<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="about.html" class="black-text">About Us</a></li>
-          <li><a href="#" class="black-text">Contact</a></li>
+          <li><a href="#" class="black-text">My Cart</a></li>
           <li>
             <form>
               <div class="input-field" style="padding-top:23px;">
@@ -116,9 +115,34 @@
 
       <div class="location">
         <h3>LOCATION</h3>
-      </div>
+        <div class="row">
+          <div class="column left">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26373211.089798357!2d-113.75316402855046!3d36.20580885276986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sus!4v1556491944745!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="column right">
+            <form onsubmit="return false;">
+              <fieldset>
+                <legend>Search for stores by location:</legend>
+                <label for="zip">Zip Code:</label> <br/>
+                <input type="text" id="zip" name="zip" size="5" maxlength ="5">
+                <input type="button" value="Search" onclick="validate();"/>
+              </fieldset>
+            </form>
 
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="spots">
+              <h5><strong>Locations Near You:</strong></h5>
+
+              <ol>
+                <li>Pittsburgh, PA</li>
+                <li>Cleveland, OH</li>
+                <li>Philadelphia, PA</li>
+                <li>Buffalo, NY</li>
+                <li>Washington, DC</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
