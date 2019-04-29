@@ -7,8 +7,9 @@
 
     <!-- Link the stylesheet  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Link JS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,9 +21,10 @@
     <!-- Navigation bar code -->
 
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#" class="black-text">For Men</a></li>
+      <li><a href="mens.html" class="black-text">For Men</a></li>
       <li><a href="womens.html" class="black-text">For Women</a></li>
       <li class="divider"></li>
+      <li><a href="#" class="black-text">Travel</a></li>
     </ul>
 
     <div class="navbar-fixed">
@@ -32,19 +34,19 @@
         <ul class="right hide-on-med-and-down">
           <li><a class="dropdown-trigger black-text" href="#!" data-target="dropdown1">Catalog<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="about.html" class="black-text">About Us</a></li>
-          <li><a href="#" class="black-text">My Cart</a></li>
           <li>
-            <form>
-              <div class="input-field" style="padding-top:23px;">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
-              </div>
-            </form>
+            <div class="input-field">
+              <i class="black-text material-icons prefix" style="top: 0;">search</i> <!-- Why does top: 0; work? -->
+              <input type="text" placeholder="search">
+            </div>       
+          </li>   
+          <li>
+            <a href="cart.html" id="shop-cart"><i class="black-text material-icons prefix" style="top: 0;">shopping_cart</i>
           </li>
         </ul>
       </div>
     </nav>
+
     </div>
 
     <!-- Logo container -->
@@ -57,13 +59,13 @@
             <h5 class="light white-text">Fashion and function.</h5>
           </div>
           <div class="row center">
-            <a href="#wallets" id="download-button" class="btn white lighten-1 btn-flat black-text">Browse Selection</a>
+            <a href="#" id="download-button" class="btn white lighten-1 btn-flat black-text">Browse Selection</a>
           </div>
           <br><br>
 
         </div>
       </div>
-      <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1" style="filter: brightness(50%);"></div>
+      <div class="parallax"><img src="images/background1.jpg" alt="background-men" style="filter: brightness(50%);"></div>
     </div>
 
 
@@ -76,7 +78,7 @@
           </div>
           <div class="description col s6">
             <br><br><br><br>
-            <h4>Light Years Ahead.</h4>
+            <h4>Light. Years Ahead.</h4>
             <p>Big Skinny wallets reduce your wallet size by and weight by 50% without losing any functionality or numbers of pockets. All that so you can carry everything you need without the baggage.</p>
             <a href="#wallets" id="download-button" class="btn white lighten-1 btn-flat black-text" style="border: 1px solid black;">View Wallets</a>
           </div>
@@ -114,8 +116,12 @@
       </div>
     </div>
     </div>
+
+    <!-- All Wallets -->
+    <div id="wallets"></div> <!-- Scrolls to this part so it doesn't cover title -->
     <br><br><br>
-    <div id="wallets" class="container">
+
+    <div class="container">
       <!-- Title -->
       <div class="row">
         <div class="col s12">
@@ -126,11 +132,11 @@
       <!-- Wallet List -->
       <div class="wallet-row row">
 
-        <div class="wallet-wrapper col s12 m4">
+        <div class="wallet-wrapper col s12 m3">
           <div class="card">
             <div class="card-image">
               <img src="images/mens_wallets/1.jpg" alt="first">
-              <span class="card-title black-text">Wallet 1</span>
+              
             </div>
             <div class="card-content">
               <p>Product description goes here.</p>
@@ -138,11 +144,11 @@
           </div>
         </div>
 
-        <div class="wallet-wrapper col s12 m4">
+        <div class="wallet-wrapper col s12 m3">
           <div class="card">
             <div class="card-image">
               <img src="images/mens_wallets/2.jpg" alt="first">
-              <span class="card-title black-text">Wallet 2</span>
+              
             </div>
             <div class="card-content">
               <p>Product description goes here.</p>
@@ -150,11 +156,11 @@
           </div>
         </div>
 
-        <div class="wallet-wrapper col s12 m4">
+        <div class="wallet-wrapper col s12 m3">
           <div class="card">
             <div class="card-image">
               <img src="images/mens_wallets/3.jpg" alt="first">
-              <span class="card-title black-text">Wallet 3</span>
+              
             </div>
             <div class="card-content">
               <p>Product description goes here.</p>
@@ -162,39 +168,11 @@
           </div>
         </div>
 
-      </div>
-
-            <div class="wallet-row row">
-
-        <div class="wallet-wrapper col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/mens_wallets/1.jpg" alt="first">
-              <span class="card-title black-text">Wallet 1</span>
-            </div>
-            <div class="card-content">
-              <p>Product description goes here.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="wallet-wrapper col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/mens_wallets/2.jpg" alt="first">
-              <span class="card-title black-text">Wallet 2</span>
-            </div>
-            <div class="card-content">
-              <p>Product description goes here.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="wallet-wrapper col s12 m4">
+        <div class="wallet-wrapper col s12 m3">
           <div class="card">
             <div class="card-image">
               <img src="images/mens_wallets/3.jpg" alt="first">
-              <span class="card-title black-text">Wallet 3</span>
+              
             </div>
             <div class="card-content">
               <p>Product description goes here.</p>
@@ -206,11 +184,11 @@
 
       <div class="wallet-row row">
 
-        <div class="wallet-wrapper col s12 m4">
+        <div class="wallet-wrapper col s12 m3">
           <div class="card">
             <div class="card-image">
               <img src="images/mens_wallets/1.jpg" alt="first">
-              <span class="card-title black-text">Wallet 1</span>
+              
             </div>
             <div class="card-content">
               <p>Product description goes here.</p>
@@ -218,11 +196,11 @@
           </div>
         </div>
 
-        <div class="wallet-wrapper col s12 m4">
+        <div class="wallet-wrapper col s12 m3">
           <div class="card">
             <div class="card-image">
               <img src="images/mens_wallets/2.jpg" alt="first">
-              <span class="card-title black-text">Wallet 2</span>
+              
             </div>
             <div class="card-content">
               <p>Product description goes here.</p>
@@ -230,11 +208,75 @@
           </div>
         </div>
 
-        <div class="wallet-wrapper col s12 m4">
+        <div class="wallet-wrapper col s12 m3">
           <div class="card">
             <div class="card-image">
               <img src="images/mens_wallets/3.jpg" alt="first">
-              <span class="card-title black-text">Wallet 3</span>
+              
+            </div>
+            <div class="card-content">
+              <p>Product description goes here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wallet-wrapper col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/mens_wallets/3.jpg" alt="first">
+              
+            </div>
+            <div class="card-content">
+              <p>Product description goes here.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wallet-row row">
+
+        <div class="wallet-wrapper col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/mens_wallets/1.jpg" alt="first">
+              
+            </div>
+            <div class="card-content">
+              <p>Product description goes here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wallet-wrapper col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/mens_wallets/2.jpg" alt="first">
+              
+            </div>
+            <div class="card-content">
+              <p>Product description goes here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wallet-wrapper col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/mens_wallets/3.jpg" alt="first">
+              
+            </div>
+            <div class="card-content">
+              <p>Product description goes here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wallet-wrapper col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/mens_wallets/3.jpg" alt="first">
+              
             </div>
             <div class="card-content">
               <p>Product description goes here.</p>

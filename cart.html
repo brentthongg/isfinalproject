@@ -1,0 +1,173 @@
+<!-- CODE TAKEN FROM https://speckyboy.com/free-shopping-cart-css-javascript/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basket</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/cart-style.css" rel="stylesheet">
+
+  <script src="js/scripts.js"></script>
+  <script src="js/cart.js"></script>
+
+
+</head>
+
+<body>
+
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="mens.html" class="black-text">For Men</a></li>
+      <li><a href="womens.html" class="black-text">For Women</a></li>
+      <li class="divider"></li>
+      <li><a href="#" class="black-text">Travel</a></li>
+    </ul>
+
+    <div class="navbar-fixed">
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo1.png" style="width:50%;padding-top:5px;"></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a class="dropdown-trigger black-text" href="#!" data-target="dropdown1">Catalog<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a href="about.html" class="black-text">About Us</a></li>
+          <li>
+            <div class="input-field">
+              <i class="material-icons prefix" style="top: 0;">search</i> <!-- Why does top: 0; work? -->
+              <input type="text" placeholder="search" style="padding-top: 8px;">
+            </div>       
+          </li>   
+          <li class="active">
+            <a href="#" id="shop-cart"><i class="black-text material-icons prefix" style="top: 0;">shopping_cart</i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+  <main>
+    <div class="basket">
+      <div class="basket-module">
+        <div style="padding-top: 75px"></div>
+        <label for="promo-code">Enter a promotional code</label>
+        <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
+        <button class="promo-code-cta">Apply</button>
+      </div>
+      <div class="basket-labels">
+        <ul>
+          <li class="item item-heading">Item</li>
+          <li class="price">Price</li>
+          <li class="quantity">Quantity</li>
+          <li class="subtotal">Subtotal</li>
+        </ul>
+      </div>
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="images/womens_wallets/1.jpg" alt="Placholder Image 2" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1><strong><span class="item-quantity">1</span> x Big Skinny Wallet</strong> for Women</h1>
+            <p><strong>Large</strong></p>
+          </div>
+        </div>
+        <div class="price">29.95</div>
+        <div class="quantity">
+          <input type="number" value="1" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">29.95</div>
+        <div class="remove">
+          <button>Remove</button>
+        </div>
+      </div>
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="images/mens_wallets/3.jpg" alt="travel_wallet" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1><strong><span class="item-quantity">1</span> x Travel Wallet</strong> for Men</h1>
+            <p><strong>Medium</strong></p>
+          </div>
+        </div>
+        <div class="price">18.95</div>
+        <div class="quantity">
+          <input type="number" value="1" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">18.95</div>
+        <div class="remove">
+          <button>Remove</button>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br>
+    <aside>
+      <div class="summary" style="padding">
+        <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+        <div class="summary-subtotal">
+          <div class="subtotal-title">Subtotal</div>
+          <div class="subtotal-value final-value" id="basket-subtotal">58.90</div>
+          <div class="summary-promo hide">
+            <div class="promo-title">Promotion</div>
+            <div class="promo-value final-value" id="basket-promo"></div>
+          </div>
+        </div>
+        <div class="summary-delivery">
+          <select name="delivery-collection" class="summary-delivery-selection">
+              <option value="0" selected="selected">Select Delivery Method</option>
+             <option value="first-class">1 Day $5.99 Shipping</option>
+             <option value="second-class">2 Day $3.99 Shipping</option>
+             <option value="signed-for">FREE Standard Shipping</option>
+          </select>
+        </div>
+        <div class="summary-total">
+          <div class="total-title">Total</div>
+          <div class="total-value final-value" id="basket-total">58.90</div>
+        </div>
+        <div class="summary-checkout">
+          <button class="checkout-cta">Go to Secure Checkout</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <br><br><br><br><br><br><br><br>
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l5 s12">
+          <h5 class="white-text">Big Skinny</h5>
+          <p class="grey-text text-lighten-4">Big Skinny is a family business and more sample text will definitely go in here once I think of something and not just this stream of text that is coming to mind at the current moment.</p>
+
+
+        </div>
+        <div class="col l2 s12"></div>
+        <div class="col l5 s12">
+          <h5 class="white-text">Social Media</h5>
+          <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Coded by <a class="brown-text text-lighten-3" href="http://www.cmu.edu">Code Monkeys</a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+</body>
