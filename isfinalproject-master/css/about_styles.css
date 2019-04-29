@@ -1,0 +1,31 @@
+.container .bios h3 {
+	font-style: bold;
+}
+
+.bios .bio-row .column {
+	float: left;
+	width: 50%;
+	height: auto;
+	position: relative;
+	padding: 1em;
+}
+
+.bios .bio-row .column .bio {
+	float: left;
+	position: relative;
+	text-align: center;
+	padding: 1em;
+	border: 1px solid black;
+}
+
+.bios .bio-row .column .bio img {
+	max-width: 90%;
+	height: auto;
+}
+
+.bios .bio-row:after {
+	content: "";
+ 	display: table;
+	clear: both;
+	height: auto;
+}
